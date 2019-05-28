@@ -1,0 +1,42 @@
+{
+  "name": "steevie",
+  "version": "0.0.1",
+  "description": "A personal assistant for Steem blockchain.",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gigatoride/steevie.git"
+  },
+  "keywords": [
+    "steem",
+    "blockchain",
+    "personal",
+    "account",
+    "assistant"
+  ],
+  "author": "gigatoride",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gigatoride/steevie/issues"
+  },
+  "homepage": "https://github.com/gigatoride/steevie#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "mongoose": "^5.5.11",
+    "node-coinmarketcap": "^0.2.0",
+    "steem": "^0.7.5",
+    "telegraf": "^3.29.0",
+    "telegraf-i18n": "^6.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
