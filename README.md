@@ -14,6 +14,7 @@ More features is under development.
 
 ## Usage
 
+![](https://media.giphy.com/media/iFUh6qdT0VfOy5U8Sq/giphy.gif)
 1. Start chatting with the bot https://telegram.me/SteevieBot
 2. Hit /start
 3. Setup your Steem Account /setup
