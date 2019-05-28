@@ -1,4 +1,6 @@
 /.vscode
 /node_modules
+.openodeignore
+.openode
 package-lock.json
 .env
