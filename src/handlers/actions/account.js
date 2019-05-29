@@ -2,6 +2,10 @@ const Extra = require('telegraf/extra');
 const mainAccount = require('./../commands/myaccount');
 const controller = require('./../../controller');
 const steem = require('steem');
+
+/**
+ * Profile action handler for more sections/buttons
+ */
 module.exports = async ctx => {
   const { i18n, match, editMessageText, from } = ctx;
 

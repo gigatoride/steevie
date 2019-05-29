@@ -1,6 +1,9 @@
 const CoinMarketCap = require('node-coinmarketcap');
 const utils = require('./../../utils');
 
+/**
+ * Replies with the current crypto prices
+ */
 module.exports = async ctx => {
   const coinmarketcap = new CoinMarketCap();
 

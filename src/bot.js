@@ -23,7 +23,7 @@ const i18n = new TelegrafI18n({
   directory: path.resolve(__dirname, 'locales')
 });
 
-/** Middleware */
+/** Middlewares */
 bot.use(i18n.middleware());
 bot.use(session());
 stage.use(handlers.actions);
@@ -39,7 +39,7 @@ bot.use((ctx, next) => {
 
 bot.use(stage.middleware());
 
-/** Fixed replies */
+/** Fixed reply for sticker */
 bot.on('sticker', ctx => ctx.reply(ctx.i18n.t('sticker-joke')));
 
 /** Unhandled messages */

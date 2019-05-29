@@ -2,6 +2,9 @@ const WizardScene = require('telegraf/scenes/wizard');
 const controller = require('./../controller');
 const steem = require('steem');
 
+/**
+ * Scene for setting up new account
+ */
 const setAccount = new WizardScene(
   'set-account-wizard',
   async ctx => {

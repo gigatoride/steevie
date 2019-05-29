@@ -2,9 +2,9 @@ const { Composer } = require('telegraf');
 
 const composer = new Composer();
 
-const accounts = require('../actions/account');
+const account = require('../actions/account');
 
-/** Accounts handler */
-composer.action(/account:\w+/, accounts);
+/** Account handler */
+composer.action(/account:\w+/, account);
 
 module.exports = composer;

@@ -1,4 +1,8 @@
 module.exports = {
+  /**
+   * Fixed crypto prices decimal according to price
+   * @param {string} price
+   */
   fixedPrice: price => {
     price = Number(price);
     if (parseInt(price) > 9) {
@@ -7,19 +11,21 @@ module.exports = {
       return price.toFixed(2);
     }
   },
-  _log10: str => {
-    const leadingDigits = parseInt(str.substring(0, 4));
-    const log = Math.log(leadingDigits) / Math.LN10 + 0.00000001;
-    const n = str.length - 1;
-    return n + (log - parseInt(log));
-  },
-  repLog10: rep2 => {
-    if (rep2 == null) return rep2;
-    let rep = String(rep2);
+  /**
+   * Convert blockchain reputation into human readable
+   * @param {number} reputation
+   */
+  repLog10: reputation => {
+    if (reputation == null) return reputation;
+    let rep = String(reputation);
     const neg = rep.charAt(0) === '-';
     rep = neg ? rep.substring(1) : rep;
-
-    let out = module.exports._log10(rep);
+    let out = str => {
+      const leadingDigits = parseInt(str.substring(0, 4));
+      const log = Math.log(leadingDigits) / Math.LN10 + 0.00000001;
+      const n = str.length - 1;
+      return n + (log - parseInt(log));
+    };
     if (isNaN(out)) out = 0;
     out = Math.max(out - 9, 0); // @ -9, $0.50 earned is approx magnitude 1
     out = (neg ? -1 : 1) * out;

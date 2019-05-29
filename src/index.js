@@ -1,5 +1,8 @@
 require('dotenv').config();
 require('./database');
+/**
+ * Removes console log on production
+ */
 function noDebug () {}
 if (process.env.NODE_ENV !== 'development') {
   global.console.log = noDebug;

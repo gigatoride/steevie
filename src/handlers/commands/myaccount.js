@@ -3,6 +3,9 @@ const steem = require('steem');
 const utils = require('./../../utils');
 const controller = require('./../../controller');
 
+/**
+ * Replies with account profile
+ */
 module.exports = async (ctx, opts = {}) => {
   const chatId = ctx.from.id;
   const account = await controller.getAccount(chatId);
