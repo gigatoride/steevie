@@ -1,4 +1,5 @@
 myaccount - view your profile
 setaccount - setup your account in Steem blockchain
+notifications - manage your account notifications
 cryptoprices - get current crypto prices in USD
 help - get some help!

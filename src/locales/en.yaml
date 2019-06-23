@@ -1,16 +1,13 @@
-account-register-success: Your account has been registered successfully ✅
-account-register-failure: Unable to register a new account 😥
 account-already-registered: There is an account already registered. 🧐
 account-deleted-success: Your account has been deleted successfully  ✅
+account-register-failure: Unable to register a new account 😥
 account-register-retry: Please enter an exist Steem account ⚠️
+account-register-success: Your account has been registered successfully ✅
 back: « Back
-help-message: |
-  I can assist you with Steem blockchain\n
-  You can control me by sending these commands:\n
-  ${commands}
 commands: |
   /myaccount - view your profile
   /setaccount - setup your account in Steem blockchain
+  /notifications - manage your account notifications
   /cryptoprices - get current crypto prices in USD
   /help - get some help!
 current-crypto-prices: |
@@ -19,21 +16,11 @@ current-crypto-prices: |
   Ethereum: ${prices.eth}💰
   Litecoin: ${prices.ltc}💰
   Steem: ${prices.steem}💰
-view-account: |
-  Here's your account information.\n
-  Name: *${name}*
-  Reputation: *${reputation}* ✨
-  Posts: *${post_count}* 📑
-  Latest Activity: *${last_account_update}* 📅
-  Witnesses Voted For: *${witnesses_voted_for}* 🗳
-  Recovery Account: *${recovery_account}* 🔃
-unknown-message: Sorry, I didn't understand that. please use /help command for more information.
-question-account-name: Alright, What is your *Steem* account name?
-sticker-response: 🙄
 delete-account: ❌ Delete Account
+help-message: I can assist you with Steem blockchain\nYou can control me by sending these commands:\n${commands}
 my-wallet: 💸 My Wallet
 my-wallet-details: |
-  *${name}* Wallet 💰\n
+  *${name}* wallet 💰\n
   *Available*
   Your STEEM Balance: *${balance}*
   Your SBD Balance: *${sbd_balance}*\n
@@ -44,4 +31,25 @@ my-wallet-details: |
   STEEM: ${reward_steem_balance}
   SBD: ${reward_sbd_balance}
   Steem Power: ${reward_vesting_steem}
+new-notification-mention: ${author} has mentioned you 🗣
+new-notification-reply: You have got a new reply from ${author} \n💬 ${reply}
+new-notification-transfer: You have received a transfer from ${from}\n${amount}\n${memo}
+notification-mentions-disable: 🗣 Disable mentions
+notification-mentions-enable: 🗣 Enable mentions
+notification-replies-disable: ↪️ Disable replies
+notification-replies-enable: ↪️ Enable replies
+notification-transfers-disable: 💸 Disable transfers
+notification-transfers-enable: 💸 Enable transfers
+notifications-main: Here you can enable or disable the notifications 🔔
 please-setup-account: Please setup an account first. please use /setaccount command.
+question-account-name: Alright, What is your *Steem* account name?
+sticker-response: 🙄
+unknown-message: Sorry, I didn't understand that. please use /help command for more information.
+view-account: |
+  Here's your account information.\n
+  Name: *${name}*
+  Reputation: *${reputation}* ✨
+  Posts: *${post_count}* 📑
+  Latest Activity: *${last_account_update}* 📅
+  Witnesses Voted For: *${witnesses_voted_for}* 🗳
+  Recovery Account: *${recovery_account}* 🔃

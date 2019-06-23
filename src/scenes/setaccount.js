@@ -1,5 +1,5 @@
 const WizardScene = require('telegraf/scenes/wizard');
-const controller = require('./../controller');
+const controller = require('../controllers/account');
 const steem = require('steem');
 
 /**

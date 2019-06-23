@@ -33,5 +33,24 @@ module.exports = {
     // base-line 0 to darken and < 0 to auto hide (grep rephide)
     out = parseInt(out);
     return out;
+  },
+  /**
+   * Get subscribes from accounts by type
+   */
+  getSubscribes: (accounts, type) => {
+    return accounts
+      .filter(account => {
+        return account.notifications[type];
+      })
+      .map(account => {
+        const { chatId, steemAccount } = account;
+        return { chatId, steemAccount };
+      });
+  },
+  /**
+   * Truncate user reply by num
+   */
+  truncateReply: (reply, num) => {
+    return reply.length > num ? reply.slice(0, num >= 3 ? num - 3 : num) + '...' : reply;
   }
 };

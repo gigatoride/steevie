@@ -1,6 +1,6 @@
 # Steevie Bot
 
-![img](https://img.shields.io/github/issues/gigatoride/steevie.svg)![Utopian](https://img.shields.io/badge/powered%20by-utopian.io-ff69b4.svg)
+![MIT](https://img.shields.io/github/license/gigatoride/steevie.svg) ![Utopian](https://img.shields.io/badge/powered%20by-utopian.io-ff69b4.svg)
 
 A personal assistant for Steem blockchain.
 
@@ -9,6 +9,10 @@ A personal assistant for Steem blockchain.
 - Steem Account Profile
 - Steem Wallet
 - Crypto Prices
+- Notifications Manager
+    - Replies
+    - Mentions
+    - Transfers
 
 More features is under development.
 

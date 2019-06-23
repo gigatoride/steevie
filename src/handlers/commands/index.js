@@ -4,6 +4,7 @@ const composer = new Composer();
 
 composer.command('setaccount', require('./setaccount'));
 composer.command('myaccount', require('./myaccount'));
+composer.command('notifications', require('./notifications'));
 composer.command('cryptoprices', require('./cryptoprices'));
 composer.command('start', require('./start'));
 composer.command('help', require('./help'));

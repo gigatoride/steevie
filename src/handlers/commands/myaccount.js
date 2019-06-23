@@ -1,7 +1,7 @@
 const Extra = require('telegraf/extra');
 const steem = require('steem');
 const utils = require('./../../utils');
-const controller = require('./../../controller');
+const controller = require('../../controllers/account');
 
 /**
  * Replies with account profile
@@ -9,15 +9,13 @@ const controller = require('./../../controller');
 module.exports = async (ctx, opts = {}) => {
   const chatId = ctx.from.id;
   const account = await controller.getAccount(chatId);
-  if (account) {
+  if (account.steemAccount) {
     steem.api.getAccounts([account.steemAccount], (err, result) => {
       const targetInfo = result[0];
 
       const customInfo = {
         reputation: utils.repLog10(targetInfo.reputation),
-        last_account_update: new Date(
-          targetInfo.last_account_update
-        ).toLocaleDateString('en-US')
+        last_account_update: new Date(targetInfo.last_account_update).toLocaleDateString('en-US')
       };
 
       const replyInfo = Object.assign(targetInfo, customInfo);
@@ -36,15 +34,9 @@ module.exports = async (ctx, opts = {}) => {
             )
           );
         if (opts.edit) {
-          return ctx.editMessageText(
-            ctx.i18n.t('view-account', replyInfo),
-            menu()
-          );
+          return ctx.editMessageText(ctx.i18n.t('view-account', replyInfo), menu());
         } else {
-          return ctx.replyWithMarkdown(
-            ctx.i18n.t('view-account', replyInfo),
-            menu()
-          );
+          return ctx.replyWithMarkdown(ctx.i18n.t('view-account', replyInfo), menu());
         }
       }
     });

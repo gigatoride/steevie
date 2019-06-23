@@ -29,11 +29,14 @@ bot.use(session());
 stage.use(handlers.actions);
 stage.use(handlers.commands);
 
+/** Operator for real-time notifications */
+require('./operator').notificationsSubscribes(bot, i18n);
+
 bot.use((ctx, next) => {
   const start = new Date();
   return next().then(() => {
     const ms = new Date() - start;
-    console.log('%s response time %s', ctx.from.id, ms);
+    if (process.env.NODE_ENV === 'development') console.log('%s response time %s', ctx.from.id, ms);
   });
 });
 
@@ -45,6 +48,10 @@ bot.on('sticker', ctx => ctx.reply(ctx.i18n.t('sticker-joke')));
 /** Unhandled messages */
 bot.on('message', ctx => {
   ctx.reply(ctx.i18n.t('unknown-message'));
+});
+
+bot.catch(err => {
+  console.log('Ooops', err);
 });
 
 /** Let's get this party started. */

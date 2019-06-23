@@ -1,6 +1,6 @@
 const Extra = require('telegraf/extra');
 const mainAccount = require('./../commands/myaccount');
-const controller = require('./../../controller');
+const controller = require('../../controllers/account');
 const steem = require('steem');
 
 /**

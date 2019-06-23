@@ -10,6 +10,11 @@ const AccountSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: false
+  },
+  notifications: {
+    replies: Boolean,
+    transfers: Boolean,
+    mentions: Boolean
   }
 });
 
