@@ -1,6 +1,6 @@
 {
   "name": "steevie",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A personal assistant for Steem blockchain.",
   "main": "./src/index.js",
   "scripts": {
