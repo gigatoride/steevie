@@ -1,5 +1,5 @@
 const Extra = require('telegraf/extra');
-const mainAccount = require('./../commands/myaccount');
+const myAccount = require('./../commands/myaccount');
 const controller = require('../../controllers/account');
 const steem = require('steem');
 
@@ -40,7 +40,7 @@ module.exports = async ctx => {
       });
       break;
     case 'back':
-      mainAccount(ctx, { edit: true });
+      myAccount(ctx, { edit: true });
       break;
   }
 };

@@ -51,6 +51,15 @@ module.exports = {
    * Truncate user reply by num
    */
   truncateReply: (reply, num) => {
-    return reply.length > num ? reply.slice(0, num >= 3 ? num - 3 : num) + '...' : reply;
+    return reply.length > num
+      ? reply.slice(0, num >= 3 ? num - 3 : num) + '...'
+      : reply;
+  },
+  /**
+   * Paginate array
+   */
+  paginate: (array, pageSize, pageNumber) => {
+    --pageNumber;
+    return array.slice(pageNumber * pageSize, (pageNumber + 1) * pageSize);
   }
 };

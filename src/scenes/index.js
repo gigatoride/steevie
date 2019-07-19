@@ -1,3 +1,4 @@
 module.exports = {
-  setAccount: require('./setaccount')
+  setAccount: require('./setaccount'),
+  trending: require('./trending')
 };

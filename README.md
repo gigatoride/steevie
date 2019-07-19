@@ -6,19 +6,22 @@ A personal assistant for Steem blockchain.
 
 ## Features
 
-- Steem Account Profile
-- Steem Wallet
+- Steem Account Profile Viewer
+- Steem Account Wallet Viewer
+- Steem Account Posts
 - Crypto Prices
 - Notifications Manager
-    - Replies
-    - Mentions
-    - Transfers
+  - Replies
+  - Mentions
+  - Transfers
+- Trending Posts
 
 More features is under development.
 
 ## Usage
 
-![](https://media.giphy.com/media/iFUh6qdT0VfOy5U8Sq/giphy.gif)
+![](./assets/gif/usage.gif)
+
 1. Start chatting with the bot https://telegram.me/SteevieBot
 2. Hit /start
 3. Setup your Steem Account /setup
@@ -61,9 +64,11 @@ then send the following commands in [commands.txt](https://github.com/gigatoride
 ### Running
 
 To start the bot please use the following command:
+
 ```
 npm start
 ```
 
 ## Licence
+
 MIT

@@ -6,7 +6,7 @@ module.exports = async (ctx, opts = {}) => {
 
   const chatId = from.id;
   const account = await controller.getAccount(chatId);
-  if (account.steemAccount) {
+  if (account && account.steemAccount) {
     return controller.getNotifications(chatId).then(doc => {
       const { notifications } = doc;
 

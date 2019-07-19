@@ -1,13 +1,18 @@
+all-tags: All tags
 account-already-registered: There is an account already registered. 🧐
 account-deleted-success: Your account has been deleted successfully  ✅
 account-register-failure: Unable to register a new account 😥
 account-register-retry: Please enter an exist Steem account ⚠️
 account-register-success: Your account has been registered successfully ✅
 back: « Back
+next: Next »
+previous: « Previous
 commands: |
-  /myaccount - view your profile
+  /myaccount - view your account profile
+  /myposts - get your account posts
   /setaccount - setup your account in Steem blockchain
   /notifications - manage your account notifications
+  /trending - get top trending posts
   /cryptoprices - get current crypto prices in USD
   /help - get some help!
 current-crypto-prices: |
@@ -17,8 +22,9 @@ current-crypto-prices: |
   Litecoin: ${prices.ltc}💰
   Steem: ${prices.steem}💰
 delete-account: ❌ Delete Account
-help-message: I can assist you with Steem blockchain\nYou can control me by sending these commands:\n${commands}
+help-message: I can assist you with Steem blockchain\n\nYou can control me by sending these commands:\n\n${commands}
 my-wallet: 💸 My Wallet
+my-posts: ${accountName} posts. page ${currentPage} of ${totalPages}
 my-wallet-details: |
   *${name}* wallet 💰\n
   *Available*
@@ -34,6 +40,7 @@ my-wallet-details: |
 new-notification-mention: ${author} has mentioned you 🗣
 new-notification-reply: You have got a new reply from ${author} \n💬 ${reply}
 new-notification-transfer: You have received a transfer from ${from}\n${amount}\n${memo}
+no-posts: Looks like ${accountName} hasn't started blogging yet!
 notification-mentions-disable: 🗣 Disable mentions
 notification-mentions-enable: 🗣 Enable mentions
 notification-replies-disable: ↪️ Disable replies
@@ -42,6 +49,8 @@ notification-transfers-disable: 💸 Disable transfers
 notification-transfers-enable: 💸 Enable transfers
 notifications-main: Here you can enable or disable the notifications 🔔
 please-setup-account: Please setup an account first. please use /setaccount command.
+please-enter-tag-trending: Please enter a tag for trending posts
+please-enter-valid-tag: Please a valid tag.
 question-account-name: Alright, What is your *Steem* account name?
 sticker-response: 🙄
 unknown-message: Sorry, I didn't understand that. please use /help command for more information.
