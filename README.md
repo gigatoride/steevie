@@ -1,7 +1,6 @@
 # Steevie Bot
 
-![MIT](https://img.shields.io/github/license/gigatoride/steevie.svg) ![Utopian](https://img.shields.io/badge/powered%20by-utopian.io-ff69b4.svg)
-
+![MIT](https://img.shields.io/github/license/gigatoride/steevie.svg)
 A personal assistant for Steem blockchain.
 
 ## Features
